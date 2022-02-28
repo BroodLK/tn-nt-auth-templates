@@ -49,19 +49,12 @@
                     <div class="panel-title">{% translate "Software Version" %}</div>
                 </div>
                 <div class="panel-body flex-center-horizontal">
-                    <ul class="list-group list-group-horizontal" style="margin-bottom: 0;">
-                        <li class="list-group-item">
-                            <h5 class="list-group-item-heading">{% translate "Current" %}</h5>
-
-                            <p class="list-group-item-text">
-                                {{ current_version }}
-                            </p>
-                        </li>
-
-                        <li class="list-group-item list-group-item-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %}">
-                            <h5 class="list-group-item-heading">{% translate "Latest Stable" %}</h5>
-
-                            <p class="list-group-item-text">
+                    <div class="card card-aside color-card-radius">
+                        <div class="card-header bg-info-gradient text-white">
+                            <p class="mb-0">{{ current_version }}</p>
+                        </div>
+                        <div class="card-header bg-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %}-gradient text-white">
+                            <p class="mb-0">
                                 <a href="https://gitlab.com/allianceauth/allianceauth/tags" style="color: rgb(0,0,0);">
                                     <i class="fab fa-gitlab hidden-xs" aria-hidden="true"></i>
                                     {{ latest_patch_version }}
@@ -71,22 +64,19 @@
                                     <br>{% translate "Update available" %}
                                 {% endif %}
                             </p>
-                        </li>
-
+                        </div>
                         {% if latest_beta %}
-                            <li class="list-group-item list-group-item-info">
-                                <h5 class="list-group-item-heading">{% translate "Latest Pre-Release" %}</h5>
-
-                                <p class="list-group-item-text">
+                            <div class="card-header bg-info-gradient text-white">
+                                <p class="mb-0">
                                     <a href="https://gitlab.com/allianceauth/allianceauth/tags" style="color: rgb(0,0,0);">
                                         <i class="fab fa-gitlab hidden-xs" aria-hidden="true"></i>
                                         {{ latest_beta_version }}
                                     </a>
                                     <br>{% translate "Pre-Release available" %}
                                 </p>
-                            </li>
+                            </div>
                         {% endif %}
-                    </ul>
+                    </div>
                 </div>
             </div>
 
