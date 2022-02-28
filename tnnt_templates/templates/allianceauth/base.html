@@ -45,10 +45,7 @@
 </head>
 
 <body class="app sidebar-mini ltr {% if not NIGHT_MODE %}light-mode{% else %}dark-mode{% endif %}">
-<!-- GLOBAL-LOADER -->
-<div id="global-loader">
-    <img src="{% static 'sash/images/loader.svg' %}" class="loader-img" alt="Loader">
-</div>
+
 {% if user.is_authenticated %}
     <div class="page"></div>
     <div class="page-main">
