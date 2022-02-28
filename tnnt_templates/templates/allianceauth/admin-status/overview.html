@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-xl-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="panel-title">{% translate "Software Version" %}</div>
@@ -51,7 +51,7 @@
                 <div class="panel-body flex-center-horizontal">
                     <div class="card card-aside color-card-radius">
                         <div class="row">
-                            <div class="col-xl-{% if latest_beta %}4{% else %}6{% endif %} col-md-12">
+                            <div class="col-xl-{% if latest_beta %}2{% else %}3{% endif %} col-md-12">
                                 <div class="card card-aside color-card-radius">
                                     <div class="card-header bg-primary-gradient text-white">
                                         <p class="mb-0">{{ current_version }}</p>
@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-{% if latest_beta %}4{% else %}6{% endif %} col-md-12">
+                            <div class="col-xl-{% if latest_beta %}2{% else %}3{% endif %} col-md-12">
                                 <div class="card card-aside color-card-radius">
                                     <div class="card-header bg-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %}-gradient text-white">
                                         <p class="mb-0">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             {% if latest_beta %}
-                            <div class="col-xl-4 col-md-12">
+                            <div class="col-xl-2 col-md-12">
                                 <div class="card card-aside color-card-radius">
                                     <div class="card-header bg-danger-gradient text-white">
                                         <p class="mb-0">
