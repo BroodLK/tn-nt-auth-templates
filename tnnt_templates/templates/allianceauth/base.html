@@ -17,14 +17,13 @@
         {% include 'bundles/bootstrap-css.html' %}
         {% include 'bundles/fontawesome.html' %}
 
-        <link href="{% static 'css/auth-base.css' %}" type="text/css" rel="stylesheet">
+{#        <link href="{% static 'css/auth-base.css' %}" type="text/css" rel="stylesheet">#}
         <link href="{% static 'azea/css/skin-modes.css' %}" rel="stylesheet"/>
-
-        <!--- FONT-ICONS CSS -->
         <link href="{% static 'azea/css/icons.css' %}" rel="stylesheet"/>
+        <link href="{% static 'azea/css/animated.css' %}" rel="stylesheet"/>
         <link id="theme" rel="stylesheet" type="text/css" media="all" href="{% static 'azea/colors/color1.css' %}"/>
         {% if NIGHT_MODE %}
-            <link href="{% static 'azea/css/dark-style.css' %}" rel="stylesheet"/>
+            <link href="{% static 'azea/css/dark.css' %}" rel="stylesheet"/>
         {% else %}
             <link href="{% static 'azea/css/style.css' %}" rel="stylesheet"/>
         {% endif %}
