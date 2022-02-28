@@ -13,7 +13,18 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-
+        <a class="navbar-brand">
+            {% if TNNT_TEMPLATE_ENTITY_ID == 1 %}
+                <img class="img-rounded" src="{{ TNNT_TEMPLATE_AA_LOGO }}?size=32" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+            {% else %}
+                {% if TNNT_TEMPLATE_ENTITY_TYPE == 'alliance' %}
+                    <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_ID|alliance_logo_url:32 }}" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+                {% elif TNNT_TEMPLATE_ENTITY_TYPE == 'corporation' %}
+                    <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_ID|corporation_logo_url:32 }}" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+                {% endif %}
+            {% endif %}
+            {{ SITE_NAME }}
+        </a>
         <div class="collapse navbar-collapse auth-menus-collapse">
             <ul class="nav navbar-nav navbar-right navbar-pills">
                 {% include 'allianceauth/night-toggle.html' %}

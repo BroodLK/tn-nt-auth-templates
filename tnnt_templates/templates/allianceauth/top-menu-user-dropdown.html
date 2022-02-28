@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load evelinks %}
 
-<li class="top-user-menu dropdown-menu dropdown-menu-end dropdown-menu-arrow{% if request.user.profile.main_character %} with-main-character{% endif %}">
+<li class="top-user-menu dropdown{% if request.user.profile.main_character %} with-main-character{% endif %}">
     <a href="#" class="dropdown-toggle" type="button" id="top-user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         {% if request.user.profile.main_character %}
             {% with request.user.profile.main_character as main %}
@@ -13,7 +13,7 @@
         <span class="caret"></span>
     </a>
 
-    <ul class="dropdown-menu top-user-menu" aria-labelledby="top-user-menu">
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow top-user-menu" aria-labelledby="top-user-menu">
         <!-- user avatar -->
         {% if request.user.profile.main_character %}
             <li class="user-main-character-avatar">
