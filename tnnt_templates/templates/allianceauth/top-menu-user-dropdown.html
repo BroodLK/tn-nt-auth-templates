@@ -13,7 +13,7 @@
         <span class="caret"></span>
     </a>
 
-    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow top-user-menu" aria-labelledby="top-user-menu">
+    <ul class="dropdown-menu top-user-menu" aria-labelledby="top-user-menu">
         <!-- user avatar -->
         {% if request.user.profile.main_character %}
             <li class="user-main-character-avatar">
@@ -38,6 +38,15 @@
         <li class="top-menu-bar-language-select">
             {% include 'public/lang_select.html' %}
         </li>
+
+        <li role="separator" class="divider"></li>
+
+        <!-- night mode toggle -->
+        {% include 'allianceauth/night-toggle.html' %}
+
+        <!-- tnnt related menu items -->
+        {% include 'allianceauth/tnnt-menu-top.html' %}
+
         <!-- admin related menu items -->
         {% include 'allianceauth/top-menu-admin.html' %}
 
