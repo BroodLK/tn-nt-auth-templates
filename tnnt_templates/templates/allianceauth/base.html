@@ -50,7 +50,7 @@
     {% endif %}
 </head>
 
-<body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
+<body class="{% if not NIGHT_MODE %}template-light-mode{% else %}dark-mode{% endif %}">
 {% if user.is_authenticated %}
     <div class="alliance-auth-background"></div>
     <div class="alliance-auth-content">
