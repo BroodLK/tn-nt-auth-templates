@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load navactive %}
+{% load menu_items %}
+
+<ul class="side-menu app-sidebar3">
+    <li class="side-item side-item-category">Main</li>
+    <li class="slide">
+        <a class="{% navactive request 'authentication:dashboard' %}" href="{% url 'authentication:dashboard' %}">
+            <i class="fas fa-tachometer-alt fa-fw"></i> {% translate "Dashboard" %}
+        </a>
+    </li>
+    <li>
+        <a class="{% navactive request 'groupmanagement:groups' %}" href="{% url 'groupmanagement:groups' %}">
+            <i class="fas fa-users fa-fw"></i> {% translate "Groups" %}
+        </a>
+    </li>
+
+    {% menu_items %}
+</ul>
