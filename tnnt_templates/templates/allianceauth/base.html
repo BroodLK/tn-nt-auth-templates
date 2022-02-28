@@ -26,7 +26,7 @@
         <link href="{% static 'sash/css/dark-style.css' %}" rel="stylesheet"/>
     </head>
 
-    <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
+    <body class="{% if NIGHT_MODE %}dark-mode{% else %}light-mode{% endif %}">
         {% if user.is_authenticated %}
             <div id="wrapper" class="container">
                 <!-- Navigation -->
