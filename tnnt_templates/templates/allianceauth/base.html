@@ -23,7 +23,11 @@
         <!--- FONT-ICONS CSS -->
         <link href="{% static 'sash/css/icons.css' %}" rel="stylesheet"/>
         <link id="theme" rel="stylesheet" type="text/css" media="all" href="{% static 'sash/colors/color1.css' %}"/>
-        <link href="{% static 'sash/css/dark-style.css' %}" rel="stylesheet"/>
+        {% if NIGHT_MODE %}
+            <link href="{% static 'sash/css/dark-style.css' %}" rel="stylesheet"/>
+        {% else %}
+            <link href="{% static 'sash/css/style.css' %}" rel="stylesheet"/>
+        {% endif %}
     </head>
 
     <body class="{% if NIGHT_MODE %}dark-mode{% else %}light-mode{% endif %}">
