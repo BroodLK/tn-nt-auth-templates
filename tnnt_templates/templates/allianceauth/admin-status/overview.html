@@ -50,16 +50,16 @@
                 </div>
                 <div class="panel-body flex-center-horizontal">
                     <ul class="list-group list-group-horizontal" style="margin-bottom: 0;">
-                        <li class="list-group-item bg-primary-gradient">
-                            <h5 class="list-group-item-heading">{% translate "Current" %}</h5>
+                        <li class="list-group-item bg-info-gradient">
+                            <h5 class="list-group-item-heading text-black">{% translate "Current" %}</h5>
 
-                            <p class="list-group-item-text">
+                            <p class="list-group-item-text text-black">
                                 {{ current_version }}
                             </p>
                         </li>
 
-                        <li class="list-group-item bg-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %}-gradient">
-                            <h5 class="list-group-item-heading">{% translate "Latest Stable" %}</h5>
+                        <li class="list-group-item bg-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %}-gradient text-black">
+                            <h5 class="list-group-item-heading text-black">{% translate "Latest Stable" %}</h5>
 
                             <p class="list-group-item-text">
                                 <a href="https://gitlab.com/allianceauth/allianceauth/tags" style="color: rgb(0,0,0);">
@@ -74,10 +74,10 @@
                         </li>
 
                         {% if latest_beta %}
-                            <li class="list-group-item bg-info-gradient">
-                                <h5 class="list-group-item-heading">{% translate "Latest Pre-Release" %}</h5>
+                            <li class="list-group-item bg-warning-gradient">
+                                <h5 class="list-group-item-heading text-black">{% translate "Latest Pre-Release" %}</h5>
 
-                                <p class="list-group-item-text">
+                                <p class="list-group-item-text text-black">
                                     <a href="https://gitlab.com/allianceauth/allianceauth/tags" style="color: rgb(0,0,0);">
                                         <i class="fab fa-gitlab hidden-xs" aria-hidden="true"></i>
                                         {{ latest_beta_version }}
