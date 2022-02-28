@@ -81,7 +81,10 @@
     <script type="application/javascript">
         $(document).ready(function() {
             {% if fits %}
-                $('#fitTable').DataTable();
+                $('#fitTable').DataTable({
+                    "order": [[ 1, "asc" ]],
+                    "pageLength": -1
+                });
             {% endif %}
 
             $('[data-toggle="tooltip"]').tooltip();

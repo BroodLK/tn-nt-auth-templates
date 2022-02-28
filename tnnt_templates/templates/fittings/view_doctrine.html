@@ -127,7 +127,10 @@
     <script type="application/javascript">
         $(document).ready(function() {
             {% if fits %}
-                $('#fitsTable').DataTable();
+                $('#fitsTable').DataTable({
+                    "order": [[ 1, "asc" ]],
+                    "pageLength": -1
+                });
             {% endif %}
 
             $('[data-toggle="tooltip"]').tooltip();

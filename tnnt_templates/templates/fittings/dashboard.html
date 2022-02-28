@@ -85,7 +85,8 @@
         $(document).ready(function(){
             {% if docs %}
                 $('#docTable').DataTable({
-                    "order": [[ 1, "asc" ]],
+                    "order": [[1, "asc"]],
+                    "pageLength": -1
                 });
             {% endif %}
 
