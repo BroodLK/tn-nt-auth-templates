@@ -19,14 +19,17 @@
         <link rel="stylesheet" href="{% static 'azea/plugins/bootstrap/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% static 'azea/css/style.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'azea/css/dark.css' %}" type="text/css">
+        {% if NIGHT_MODE %}
+            <link rel="stylesheet" href="{% static 'azea/css/dark.css' %}" type="text/css">
+        {% else %}
+            <link rel="stylesheet" href="{% static 'azea/css/style.css' %}" type="text/css">
+        {% endif %}
         <link rel="stylesheet" href="{% static 'azea/css/skin-mode.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'azea/css/animated.css' %}" type="text/css">
 
     </head>
 
-    <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
+    <body class="app sidebar-mini {% if NIGHT_MODE %}dark-mode{% endif %}">
         {% if user.is_authenticated %}
             <div class="alliance-auth-background"></div>
             <div class="alliance-auth-content">
