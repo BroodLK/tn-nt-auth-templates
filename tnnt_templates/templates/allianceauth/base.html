@@ -871,6 +871,17 @@
 <script src="{% static '/color/plugins/moment/min/moment.min.js' %}"></script>
 <script src="{% static '/color/plugins/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
 <script src="{% static '/color/js/demo/dashboard-v3.js' %}"></script>
+
+<script type="application/javascript">
+    let notificationUPdateSettings = {
+        notificationsListViewUrl: "{% url 'notifications:list' %}",
+        notificationsRefreshTime: "{% notifications_refresh_time %}",
+        userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"
+    };
+</script>
+<script src="{% static 'js/refresh_notifications.js' %}"></script>
+<script src="{% static 'js/eve-time.js' %}"></script>
+
 <!-- ================== END page-js ================== -->
 </body>
 </html>
