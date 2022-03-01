@@ -127,32 +127,20 @@
                 </div>
                 <div class="menu-divider m-0"></div>
                 <div class="menu-header">Navigation</div>
-					<div class="menu-item has-sub active">
-						<a href="javascript:;" class="menu-link">
-							<div class="menu-icon">
-								<i class="fa fa-sitemap"></i>
-							</div>
-							<div class="menu-text">
-                                <a class="{% navactive request 'authentication:dashboard' %}" href="{% url 'authentication:dashboard' %}"> {% translate "Dashboard" %}</a>
-                            </div>
-							<div class="menu-caret"></div>
-						</a>
-						<div class="menu-submenu">
-							<div class="menu-item">
-                            </div>
-						</div>
-					</div>
-                <div class="menu-item">
-                    <a href="javascript:;" class="menu-link">
+                <div class="menu-item {% navactive request 'authentication:dashboard' %}">
+                    <a href="{% url 'authentication:dashboard' %}" class="menu-link">
+                        <div class="menu-icon">
+                            <i class="fa fa-sitemap"></i>
+                        </div>
+                        <div class="menu-text">{% translate "Dashboard" %}</div>
+                    </a>
+                </div>
+            <div class="menu-item {% navactive request 'groupmanagement:groups' %}">
+                    <a href="{% navactive request 'groupmanagement:groups' %}" class="menu-link">
                         <div class="menu-icon">
                             <i class="fas fa-users fa-fw"></i>
                         </div>
-                        <div class="menu-text">
-                            <a class="{% navactive request 'groupmanagement:groups' %}"
-                               href="{% url 'groupmanagement:groups' %}">
-                                {% translate "Groups" %}
-                            </a>
-                        </div>
+                        <div class="menu-text">{% translate "Groups" %}</div>
                     </a>
                 </div>
                 {% include 'allianceauth/side-menu.html' %}
