@@ -10,20 +10,3 @@
         </li>
     {% endif %}
 {% endif %}
-
-{% if user.is_superuser %}
-    <li role="separator" class="divider"></li>
-    <li>
-        <a href="https://allianceauth.readthedocs.io/" target="_blank" rel="noopener noreferer">
-            <i class="fas fa-question-circle fa-fw"></i>
-            {% translate "AA Documentation" %}
-        </a>
-    </li>
-
-    <li>
-        <a href="https://discord.gg/fjnHAmk" target="_blank" rel="noopener noreferer">
-            <i class="fab fa-discord fa-fw"></i>
-            {% translate "AA Support Discord" %}
-        </a>
-    </li>
-{% endif %}

@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load navactive %}
+{% load menu_items %}
+
+<div class="menu-item">
+    <a href="javascript:;" class="menu-link">
+        <div class="menu-icon">
+            <i class="fas fa-tachometer-alt fa-fw"></i>
+        </div>
+        <div class="menu-text">
+            <a class="{% navactive request 'authentication:dashboard' %}" href="{% url 'authentication:dashboard' %}">
+                {% translate "Dashboard" %}
+            </a>
+        </div>
+    </a>
+</div>
+<div class="menu-item">
+    <a href="javascript:;" class="menu-link">
+        <div class="menu-icon">
+            <i class="fas fa-users fa-fw"></i>
+        </div>
+        <div class="menu-text">
+            <a class="{% navactive request 'groupmanagement:groups' %}" href="{% url 'groupmanagement:groups' %}">
+                {% translate "Groups" %}
+            </a>
+        </div>
+    </a>
+</div>
+
+{% menu_items %}

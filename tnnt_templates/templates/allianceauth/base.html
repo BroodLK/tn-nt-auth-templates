@@ -16,20 +16,23 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} » {{ SITE_NAME }}{% endblock title %}</title>
 
-        <link rel="stylesheet" href="{% static 'sash/plugins/bootstrap/css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'sash/css/dark-style.css' %}" type="text/css">
-        {% else %}
-            <link rel="stylesheet" href="{% static 'sash/css/style.css' %}" type="text/css">
-        {% endif %}
-        <link rel="stylesheet" href="{% static 'sash/css/skin-mode.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'sash/css/animated.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/fonts.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/libs/fira-code/6.2.0/fira_code.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/libs/highlight-js/11.01/styles/default.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
 
+        {% block extra_css %}{% endblock extra_css %}
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}" type="text/css">
+
+        {% if NIGHT_MODE %}
+            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}" type="text/css">
+        {% endif %}
     </head>
 
-    <body class="app sidebar-mini {% if NIGHT_MODE %}dark-mode{% endif %}">
+    <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
         {% if user.is_authenticated %}
             <div class="alliance-auth-background"></div>
             <div class="alliance-auth-content">
