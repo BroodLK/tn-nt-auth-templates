@@ -16,16 +16,16 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} » {{ SITE_NAME }}{% endblock title %}</title>
 
-        <link rel="stylesheet" href="{% static 'azea/plugins/bootstrap/css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'sash/plugins/bootstrap/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
         {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'azea/css/dark.css' %}" type="text/css">
+            <link rel="stylesheet" href="{% static 'sash/css/dark-style.css' %}" type="text/css">
         {% else %}
-            <link rel="stylesheet" href="{% static 'azea/css/style.css' %}" type="text/css">
+            <link rel="stylesheet" href="{% static 'sash/css/style.css' %}" type="text/css">
         {% endif %}
-        <link rel="stylesheet" href="{% static 'azea/css/skin-mode.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'azea/css/animated.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'sash/css/skin-mode.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'sash/css/animated.css' %}" type="text/css">
 
     </head>
 
