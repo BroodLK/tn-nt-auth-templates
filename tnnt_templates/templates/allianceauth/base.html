@@ -19,17 +19,11 @@
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/fonts.min.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'tnnt_templates/libs/fira-code/6.2.0/fira_code.min.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'tnnt_templates/libs/highlight-js/11.01/styles/default.min.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'azea/css/style.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'azea/css/dark.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'azea/css/skin-mode.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'azea/css/animated.css' %}" type="text/css">
 
-        {% block extra_css %}{% endblock extra_css %}
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}" type="text/css">
-
-        {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}" type="text/css">
-        {% endif %}
     </head>
 
     <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
