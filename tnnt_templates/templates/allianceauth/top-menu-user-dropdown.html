@@ -13,13 +13,12 @@
 <div class="dropdown-menu dropdown-menu-end me-1">
     {% if request.user.profile.main_character %}
         {% with request.user.profile.main_character as main %}
-            <img class="img-rounded ra-avatar" src="{{ main.character_id|character_portrait_url:256 }}" alt="{{ main.character_name }}">
+            <div class="img" style="background-image: url({{ main.character_id|character_portrait_url:256 }})">
             <p class="text-center">
-                <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.character_name }}</span>
-                <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.corporation_name }}</span>
-
+                    <small>{{ main.character.name }}</small><br>
+                    <small>{{ main.corporation_name }}</small><br>
                 {% if main.alliance_name %}
-                    <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.alliance_name }}</span>
+                    <small>{{ main.alliance_name }}</small>
                 {% endif %}
             </p>
         {% endwith %}

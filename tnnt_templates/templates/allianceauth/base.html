@@ -93,20 +93,58 @@
         <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
             <!-- BEGIN menu -->
             <div class="menu">
-                <div class="menu-header">Navigation</div>
-                <div class="menu-item">
-                    <a href="javascript:;" class="menu-link">
-                        <div class="menu-icon">
-                            <i class="fas fa-tachometer-alt fa-fw"></i>
+                <div class="menu-profile">
+                    <a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
+                        <div class="menu-profile-cover with-shadow"></div>
+                        <div class="menu-profile-image">
+                            <img src="../assets/img/user/user-13.jpg" alt="">
                         </div>
-                        <div class="menu-text">
-                            <a class="{% navactive request 'authentication:dashboard' %}"
-                               href="{% url 'authentication:dashboard' %}">
-                                {% translate "Dashboard" %}
-                            </a>
+                        <div class="menu-profile-info">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    {% if request.user.profile.main_character %}
+                                        {% with request.user.profile.main_character as main %}
+                                            {{ main.character_name }}
+                                        {% endwith %}
+                                    {% else %}
+                                        Welcome
+                                    {% endif %}
+                                </div>
+                                <div class="menu-caret ms-auto"></div>
+                            </div>
+                            {% if request.user.profile.main_character %}
+                                {% with request.user.profile.main_character as main %}
+                                    <small>{{ main.corporation_name }}</small>
+                                {% endwith %}
+                            {% endif %}
                         </div>
                     </a>
                 </div>
+                <div id="appSidebarProfileMenu" class="collapse closed" style="display: none;">
+                    <div class="menu-item pt-5px">
+                        <a href="javascript:;" class="menu-link">
+                            <div class="menu-icon"><i class="fa fa-cog"></i></div>
+                            <div class="menu-text">Settings</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu-divider m-0"></div>
+                <div class="menu-header">Navigation</div>
+					<div class="menu-item has-sub active">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fa fa-sitemap"></i>
+							</div>
+							<div class="menu-text">
+                                <a class="{% navactive request 'authentication:dashboard' %}" href="{% url 'authentication:dashboard' %}"> {% translate "Dashboard" %}</a>
+                            </div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+                            </div>
+						</div>
+					</div>
                 <div class="menu-item">
                     <a href="javascript:;" class="menu-link">
                         <div class="menu-icon">
