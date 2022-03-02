@@ -71,10 +71,61 @@
                                 <div class="stats-title">{% translate "Latest Pre-Release" %}</div>
                             </div>
                             <div class="stats-number">{{ latest_beta_version }}</div>
-                            <div class="stats-desc">Pre-release available</div>
                         </div>
                     </div>
                 {% endif %}
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card border-0 mb-3 overflow-hidden ">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="mb-3">
+                                <b>{% translate "Task Queue" %}</b>
+                            </div>
+                            <div class="row text-truncate">
+                                <div class="panel-body flex-center-horizontal">
+                                    <p>
+                                        {% blocktranslate with total=tasks_total|intcomma latest=earliest_task|timesince|default_if_none:"?" %}
+                                            Status of {{ total }} processed tasks • last {{ latest }}
+                                        {% endblocktranslate %}
+                                    </p>
+
+                                    <div class="progress" style="height: 21px;">
+                                        {% include "allianceauth/admin-status/celery_bar_partial.html" with label="suceeded" level="success" tasks_count=tasks_succeeded %}
+                                        {% include "allianceauth/admin-status/celery_bar_partial.html" with label="retried" level="info" tasks_count=tasks_retried %}
+                                        {% include "allianceauth/admin-status/celery_bar_partial.html" with label="failed" level="danger" tasks_count=tasks_failed %}
+                                    </div>
+
+                                    <p>
+                                        {% blocktranslate with tasks_count=task_queue_length|default_if_none:"?"|intcomma %}
+                                            Queued: {{ tasks_count }}
+                                        {% endblocktranslate %}
+
+                                        {% if tasks_succeeded %}
+                                            {% blocktranslate with tasks_count=tasks_succeeded|default_if_none:"?"|intcomma %}
+                                                | <span class="text-success">Succeeded: {{ tasks_count }}</span>
+                                            {% endblocktranslate %}
+                                        {% endif %}
+
+                                        {% if tasks_retried %}
+                                            {% blocktranslate with tasks_count=tasks_retried|default_if_none:"?"|intcomma %}
+                                                | <span class="text-info">Retried: {{ tasks_count }}</span>
+                                            {% endblocktranslate %}
+                                        {% endif %}
+
+                                        {% if tasks_failed %}
+                                            {% blocktranslate with tasks_count=tasks_failed|default_if_none:"?"|intcomma %}
+                                                | <span class="text-danger">Failed: {{ tasks_count }}</span>
+                                            {% endblocktranslate %}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
