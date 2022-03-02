@@ -10,7 +10,7 @@
     <div class="row">
         <!-- BEGIN col-6 -->
         <div class="col-xl-6">
-            <div class="card border-0 mb-3 overflow-hidden shadow">
+            <div class="card border-0 mb-3 overflow-hidden shadow" style="min-height: 272px">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12">
@@ -41,7 +41,7 @@
 
         <div class="col-xl-6">
             <div class="row">
-                <div class="col-xl-{% if latest_beta %}3{% else %}6{% endif %} col-md-6">
+                <div class="col-xl-{% if latest_beta %}4{% else %}6{% endif %} col-md-6">
                     <div class="widget widget-stats bg-gradient-cyan-blue shadow">
                         <div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
                         <div class="stats-content">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-{% if latest_beta %}3{% else %}6{% endif %} col-md-6">
+                <div class="col-xl-{% if latest_beta %}4{% else %}6{% endif %} col-md-6">
                     <div
                         class="widget widget-stats bg-gradient-{% if latest_patch %}success{% elif latest_minor %}warning{% else %}danger{% endif %} shadow">
                         <div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 {% if latest_beta %}
-                    <div class="col-xl-3 col-md-6">
+                    <div class="col-xl-4 col-md-6">
                         <div class="widget widget-stats bg-gradient-warning shadow">
                             <div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
                             <div class="stats-content">
@@ -75,9 +75,7 @@
                     </div>
                 {% endif %}
             </div>
-        </div>
-        <div class="col-xl-6"></div>
-        <div class="col-xl-6">
+
             <div class="card border-0 mb-3 overflow-hidden shadow">
                 <div class="card-body">
                     <div class="row">

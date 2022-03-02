@@ -17598,11 +17598,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     transition: all .2s linear
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item {
     position: relative
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li. menu-link {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link {
     padding: 3px 20px 3px 15px;
     line-height: 18px;
     color: rgba(255, 255, 255, .6);
@@ -17613,11 +17613,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     align-items: flex-start
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link .menu-text {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link .menu-text {
     flex: 1
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link .menu-badge {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link .menu-badge {
     padding: 0 8px;
     background: #000;
     font-weight: 600;
@@ -17625,7 +17625,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 12px
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link .menu-label {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link .menu-label {
     padding: 3px 6px;
     font-size: 75%;
     font-weight: 500;
@@ -17638,16 +17638,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 4px
 }
 
-.app-gradient-enabled .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link .menu-label {
+.app-gradient-enabled .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link .menu-label {
     background: linear-gradient(to bottom, #3483f0 0, #1168e0 100%)
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link:focus, .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link:hover {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link:focus, .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link:hover {
     background: 0 0;
     color: #fff
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-link:after {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-link:after {
     content: "";
     position: absolute;
     top: 11px;
@@ -17657,7 +17657,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     left: -11px
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-icon {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-icon {
     width: 14px;
     text-align: center;
     line-height: 20px;
@@ -17665,19 +17665,19 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin-right: 10px
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-icon img {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-icon img {
     max-width: 100%;
     max-height: 100%
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-icon[class^=ion-] {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-icon[class^=ion-] {
     margin-right: 8px;
     width: 18px;
     font-size: 18px;
     margin-left: -2px
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-icon-img {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-icon-img {
     margin-right: 10px;
     margin-top: 3px;
     width: 14px;
@@ -17691,7 +17691,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     align-items: center
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-icon-img img {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-icon-img img {
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -17739,7 +17739,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     color: #fff
 }
 
-.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li .menu-submenu {
+.app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item .menu-submenu {
     padding: 0 0 0 15px;
     background: 0 0;
     position: relative;
@@ -17927,7 +17927,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin: 0 -15px
 }
 
-.app-sidebar .menu .menu-search + .menu-item li {
+.app-sidebar .menu .menu-search + .menu-item {
     padding-top: 0
 }
 
@@ -17951,11 +17951,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     transform: rotate(90deg)
 }
 
-.app-sidebar .menu .menu-item li {
+.app-sidebar .menu .menu-item {
     position: relative
 }
 
-.app-sidebar .menu .menu-item li .menu-link {
+.app-sidebar .menu .menu-item .menu-link {
     padding: 7px 15px;
     line-height: 20px;
     color: rgba(255, 255, 255, .6);
@@ -17966,11 +17966,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 4px
 }
 
-.app-sidebar .menu .menu-item li .menu-link .menu-text {
+.app-sidebar .menu .menu-item .menu-link .menu-text {
     flex: 1
 }
 
-.app-sidebar .menu .menu-item li .menu-link .menu-badge {
+.app-sidebar .menu .menu-item .menu-link .menu-badge {
     padding: 0 .975em;
     background: #fff;
     color: #000;
@@ -17979,7 +17979,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 12px
 }
 
-.app-sidebar .menu .menu-item li .menu-link .menu-label {
+.app-sidebar .menu .menu-item .menu-link .menu-label {
     padding: .35em .65em;
     font-size: 75%;
     font-weight: 500;
@@ -17992,16 +17992,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 3px
 }
 
-.app-sidebar .menu .menu-item li .menu-link:focus, .app-sidebar .menu .menu-item li .menu-link:hover {
+.app-sidebar .menu .menu-item .menu-link:focus, .app-sidebar .menu .menu-item .menu-link:hover {
     background: 0 0;
     color: #fff
 }
 
-.app-sidebar .menu .menu-item li .menu-link .text-theme {
+.app-sidebar .menu .menu-item .menu-link .text-theme {
     color: #fff
 }
 
-.app-sidebar .menu .menu-item li .menu-icon {
+.app-sidebar .menu .menu-item .menu-icon {
     width: 14px;
     text-align: center;
     line-height: 20px;
@@ -18012,12 +18012,12 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin-right: 10px
 }
 
-.app-sidebar .menu .menu-item li .menu-icon img {
+.app-sidebar .menu .menu-item .menu-icon img {
     max-width: 100%;
     max-height: 100%
 }
 
-.app-sidebar .menu .menu-item li .menu-icon [class^=ion-] {
+.app-sidebar .menu .menu-item .menu-icon [class^=ion-] {
     margin-right: 8px;
     width: 18px;
     font-size: 18px;
@@ -18025,7 +18025,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     display: block
 }
 
-.app-sidebar .menu .menu-item li .menu-icon-img {
+.app-sidebar .menu .menu-item .menu-icon-img {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 14px;
@@ -18040,21 +18040,21 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin-right: 10px
 }
 
-.app-sidebar .menu .menu-item li .menu-icon-img img {
+.app-sidebar .menu .menu-item .menu-icon-img img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     margin: 0 auto
 }
 
-.app-sidebar .menu .menu-item li .menu-submenu {
+.app-sidebar .menu .menu-item .menu-submenu {
     padding: 5px 0 10px 25px;
     margin: 0;
     position: relative;
     display: none
 }
 
-.app-sidebar .menu .menu-item li .menu-submenu .menu-item li .menu-link {
+.app-sidebar .menu .menu-item .menu-submenu .menu-item .menu-link {
     padding: 3px 15px 3px 14px;
     color: rgba(255, 255, 255, .45);
     text-decoration: none;
@@ -18062,16 +18062,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     line-height: 18px
 }
 
-.app-sidebar .menu .menu-item li .menu-submenu .menu-item li .menu-link:focus, .app-sidebar .menu .menu-item li .menu-submenu .menu-item li .menu-link:hover {
+.app-sidebar .menu .menu-item .menu-submenu .menu-item .menu-link:focus, .app-sidebar .menu .menu-item .menu-submenu .menu-item .menu-link:hover {
     color: #fff
 }
 
-.app-sidebar .menu .menu-item li .menu-submenu .menu-item.active > .menu-link {
+.app-sidebar .menu .menu-item .menu-submenu .menu-item.active > .menu-link {
     background: 0 0;
     color: #fff
 }
 
-.app-sidebar .menu .menu-item li .menu-submenu .menu-item li .menu-submenu {
+.app-sidebar .menu .menu-item .menu-submenu .menu-item .menu-submenu {
     padding: 0 0 0 15px;
     background: 0 0
 }
@@ -18118,11 +18118,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     display: none !important
 }
 
-.app-sidebar.app-sidebar-grid .menu > .menu-item li {
+.app-sidebar.app-sidebar-grid .menu > .menu-item {
     border-top: 1px solid var(--app-component-border-color)
 }
 
-.app-sidebar.app-sidebar-grid .menu > .menu-item li > .menu-link {
+.app-sidebar.app-sidebar-grid .menu > .menu-item > .menu-link {
     border-radius: 0
 }
 
@@ -18130,7 +18130,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-color: transparent
 }
 
-.app-sidebar.app-sidebar-grid .menu > .menu-item.active.closed + .menu-item li {
+.app-sidebar.app-sidebar-grid .menu > .menu-item.active.closed + .menu-item {
     border-color: transparent
 }
 
@@ -18239,11 +18239,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     }
 }
 
-.app-top-menu .menu .menu-item li {
+.app-top-menu .menu .menu-item {
     position: relative
 }
 
-.app-top-menu .menu .menu-item li .menu-link {
+.app-top-menu .menu .menu-item .menu-link {
     padding: 10px 20px;
     color: rgba(255, 255, 255, .6);
     text-decoration: none;
@@ -18252,11 +18252,11 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     align-items: center
 }
 
-.app-top-menu .menu .menu-item li .menu-link .menu-text {
+.app-top-menu .menu .menu-item .menu-link .menu-text {
     flex: 1
 }
 
-.app-top-menu .menu .menu-item li .menu-link .menu-badge {
+.app-top-menu .menu .menu-item .menu-link .menu-badge {
     padding: 0 8px;
     background: #1a1a1a;
     font-weight: 500;
@@ -18264,7 +18264,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 12px
 }
 
-.app-top-menu .menu .menu-item li .menu-link .menu-label {
+.app-top-menu .menu .menu-item .menu-link .menu-label {
     padding: 3px 6px;
     font-size: 75%;
     font-weight: 500;
@@ -18277,16 +18277,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     border-radius: 4px
 }
 
-.app-gradient-enabled .app-top-menu .menu .menu-item li .menu-link .menu-label {
+.app-gradient-enabled .app-top-menu .menu .menu-item .menu-link .menu-label {
     background-image: var(--bs-gradient)
 }
 
-.app-top-menu .menu .menu-item li .menu-link:focus, .app-top-menu .menu .menu-item li .menu-link:hover {
+.app-top-menu .menu .menu-item .menu-link:focus, .app-top-menu .menu .menu-item .menu-link:hover {
     background: 0 0;
     color: #fff
 }
 
-.app-top-menu .menu .menu-item li .menu-icon {
+.app-top-menu .menu .menu-item .menu-icon {
     width: 14px;
     text-align: center;
     line-height: 20px;
@@ -18297,12 +18297,12 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin-right: 10px
 }
 
-.app-top-menu .menu .menu-item li .menu-icon img {
+.app-top-menu .menu .menu-item .menu-icon img {
     max-width: 100%;
     max-height: 100%
 }
 
-.app-top-menu .menu .menu-item li .menu-icon [class^=ion-] {
+.app-top-menu .menu .menu-item .menu-icon [class^=ion-] {
     margin-right: 8px;
     width: 18px;
     font-size: 18px;
@@ -18310,7 +18310,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     display: block
 }
 
-.app-top-menu .menu .menu-item li .menu-icon-img {
+.app-top-menu .menu .menu-item .menu-icon-img {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 14px;
@@ -18326,7 +18326,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     margin-right: 10px
 }
 
-.app-top-menu .menu .menu-item li .menu-icon-img img {
+.app-top-menu .menu .menu-item .menu-icon-img img {
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -18479,7 +18479,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     }
 }
 
-.app-top-menu .menu .menu-submenu > .menu-item li > .menu-link {
+.app-top-menu .menu .menu-submenu > .menu-item > .menu-link {
     padding: 4px 20px;
     color: rgba(255, 255, 255, .6);
     text-decoration: none;
@@ -18489,16 +18489,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
 }
 
 @media (max-width: 575.98px) {
-    .app-top-menu .menu .menu-submenu > .menu-item li > .menu-link {
+    .app-top-menu .menu .menu-submenu > .menu-item > .menu-link {
         padding-left: 44px
     }
 }
 
-.app-top-menu .menu .menu-submenu > .menu-item li > .menu-link .menu-caret {
+.app-top-menu .menu .menu-submenu > .menu-item > .menu-link .menu-caret {
     margin-left: auto
 }
 
-.app-top-menu .menu .menu-submenu > .menu-item li > .menu-link:focus, .app-top-menu .menu .menu-submenu > .menu-item li > .menu-link:hover {
+.app-top-menu .menu .menu-submenu > .menu-item > .menu-link:focus, .app-top-menu .menu .menu-submenu > .menu-item > .menu-link:hover {
     color: #fff
 }
 
@@ -18533,7 +18533,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
         overflow: hidden
     }
 
-    .boxed-layout .app-top-menu .menu > .menu-item li > .menu-submenu {
+    .boxed-layout .app-top-menu .menu > .menu-item > .menu-submenu {
         position: fixed;
         top: auto;
         left: auto;
@@ -18657,18 +18657,18 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     box-shadow: none
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li > .menu-link {
+.app-with-light-sidebar .app-sidebar .menu .menu-item > .menu-link {
     color: #666;
     font-weight: 500
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li > .menu-link .menu-badge {
+.app-with-light-sidebar .app-sidebar .menu .menu-item > .menu-link .menu-badge {
     background: #ccc;
     color: #1a1a1a;
     font-weight: 500
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li > .menu-link:focus, .app-with-light-sidebar .app-sidebar .menu .menu-item li > .menu-link:hover {
+.app-with-light-sidebar .app-sidebar .menu .menu-item > .menu-link:focus, .app-with-light-sidebar .app-sidebar .menu .menu-item > .menu-link:hover {
     color: #000
 }
 
@@ -18686,39 +18686,39 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     color: #828282
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item li > .menu-link {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item > .menu-link {
     color: #666;
     font-weight: 500
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item li > .menu-link:focus, .app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item li > .menu-link:hover {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item > .menu-link:focus, .app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item > .menu-link:hover {
     color: #000;
     background: 0 0
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item li > .menu-link:after {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item > .menu-link:after {
     background: #ccc
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item:before {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item:before {
     background: #ccc
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item:after {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item:after {
     border-width: 2px;
     border-color: #ccc;
     background: #fff
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item.active > .menu-link {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item.active > .menu-link {
     color: #000
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item.active:after {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item.active:after {
     border-color: #1c75ee
 }
 
-.app-with-light-sidebar .app-sidebar .menu .menu-item li .menu-submenu > .menu-item.has-sub > .menu-link:before {
+.app-with-light-sidebar .app-sidebar .menu .menu-item .menu-submenu > .menu-item.has-sub > .menu-link:before {
     background: #ccc
 }
 
@@ -18756,16 +18756,16 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     background: #ccc
 }
 
-.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > .menu-link {
+.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > .menu-link {
     color: #666;
     font-weight: 500
 }
 
-.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > .menu-link:focus, .app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > .menu-link:hover {
+.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > .menu-link:focus, .app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > .menu-link:hover {
     color: #000
 }
 
-.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > .menu-link:after {
+.app-with-light-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > .menu-link:after {
     background: #ccc
 }
 
@@ -18814,12 +18814,12 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     text-align: right
 }
 
-.app-with-end-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > a.menu-link {
+.app-with-end-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > a.menu-link {
     padding-left: 15px;
     padding-right: 20px
 }
 
-.app-with-end-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item li > a.menu-link:after {
+.app-with-end-sidebar .app-sidebar-float-submenu-container .app-sidebar-float-submenu .menu-item > a.menu-link:after {
     right: -11px;
     left: auto
 }
@@ -18968,19 +18968,19 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     padding: 0 8px
 }
 
-.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link {
+.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link {
     padding: 10px 12px
 }
 
-.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link .menu-badge, .app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link .menu-label, .app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link .menu-text {
+.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link .menu-badge, .app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link .menu-label, .app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link .menu-text {
     display: none
 }
 
-.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link .menu-icon {
+.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link .menu-icon {
     margin: 0
 }
 
-.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item li > .menu-link .menu-icon-img {
+.app-sidebar-minified:not(.app-without-sidebar) .app-sidebar:not(.app-sidebar-end) .menu > .menu-item > .menu-link .menu-icon-img {
     margin: 0
 }
 
@@ -27835,10 +27835,6 @@ code {
     background: var(--app-component-dropdown-bg);
     border-radius: 4px;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)
-}
-
-li {
-    background: var(--app-component-dropdown-hover-bg)
 }
 
 .apexcharts-canvas .apexcharts-menu .apexcharts-menu-item:focus, .apexcharts-canvas .apexcharts-menu .apexcharts-menu-item:hover {
