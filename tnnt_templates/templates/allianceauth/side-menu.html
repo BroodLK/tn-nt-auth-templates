@@ -2,4 +2,6 @@
 {% load navactive %}
 {% load menu_items %}
 
-{% menu_items %}
+{% for item in menu_items %}
+    {{ item }}
+{% endfor %}
