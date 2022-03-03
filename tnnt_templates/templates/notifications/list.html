@@ -7,90 +7,103 @@
 {% block content %}
     <h1 class="page-header text-center">{% translate "Notifications" %}</h1>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <ul class="nav nav-pills">
-                <li class="active"><a data-toggle="pill" href="#unread">{% translate "Unread" %}
-                    <b>({{ unread|length }})</b></a></li>
-                <li><a data-toggle="pill" href="#read">{% translate "Read" %} <b>({{ read|length }})</b></a>
-                </li>
-                <div class="pull-right">
-                    <a href="{% url 'notifications:mark_all_read' %}" class="btn btn-primary">{% translate "Mark All Read" %}</a>
-                    <a href="{% url 'notifications:delete_all_read' %}" class="btn btn-danger">{% translate "Delete All Read" %}</a>
-                </div>
-            </ul>
-        </div>
-        <div class="panel-body">
-            <div class="tab-content">
-                <div id="unread" class="tab-pane active">
-                    <div class="table-responsive">
-                        {% if unread %}
-                            <table class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">{% translate "Timestamp" %}</th>
-                                        <th class="text-center">{% translate "Title" %}</th>
-                                        <th class="text-center">{% translate "Action" %}</th>
+
+
+
+
+    <div class="col-xl-12 ui-sortable">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#unread" data-bs-toggle="tab" class="nav-link active">
+                    <span class="d-sm-none">Tab 1</span>
+                    <span class="d-sm-block d-none">{% translate "Unread" %}<b>({{ unread|length }})</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#read" data-bs-toggle="tab" class="nav-link">
+                    <span class="d-sm-none">Tab 2</span>
+                    <span class="d-sm-block d-none">{% translate "Read" %} <b>({{ read|length }})</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'notifications:mark_all_read' %}" class="btn btn-primary">{% translate "Mark All Read" %}</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'notifications:delete_all_read' %}" class="btn btn-danger">{% translate "Delete All Read" %}</a>
+            </li>
+        </ul>
+
+
+        <div class="tab-content panel rounded-0 p-3 m-0">
+
+            <div class="tab-pane fade active show" id="unread">
+                <div class="table-responsive">
+                    {% if unread %}
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">{% translate "Timestamp" %}</th>
+                                    <th class="text-center">{% translate "Title" %}</th>
+                                    <th class="text-center">{% translate "Action" %}</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for notif in unread %}
+                                    <tr class="{{ notif.level }}">
+                                        <td class="text-center">{{ notif.timestamp }}</td>
+                                        <td class="text-center">{{ notif.title }}</td>
+                                        <td class="text-center">
+                                            <a href="{% url 'notifications:view' notif.id %}" class="btn btn-success" title="View">
+                                                <span class="fas fa-eye"></span>
+                                            </a>
+                                            <a href="{% url 'notifications:remove' notif.id %}" class="btn btn-danger" title="Remove">
+                                                <span class="fas fa-x"></span>
+                                            </a>
+                                        </td>
                                     </tr>
-                                </thead>
-
-                                <tbody>
-                                    {% for notif in unread %}
-                                        <tr class="{{ notif.level }}">
-                                            <td class="text-center">{{ notif.timestamp }}</td>
-                                            <td class="text-center">{{ notif.title }}</td>
-                                            <td class="text-center">
-                                                <a href="{% url 'notifications:view' notif.id %}" class="btn btn-success" title="View">
-                                                    <span class="fas fa-eye"></span>
-                                                </a>
-                                                <a href="{% url 'notifications:remove' notif.id %}" class="btn btn-danger" title="Remove">
-                                                    <span class="fas fa-x"></span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        {% else %}
-                            <div class="alert alert-warning text-center">{% translate "No unread notifications." %}</div>
-                        {% endif %}
-                    </div>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class="alert alert-warning text-center">{% translate "No unread notifications." %}</div>
+                    {% endif %}
                 </div>
-                <div id="read" class="tab-pane fade">
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            {% if read %}
-                                <table class="table table-striped table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">{% translate "Timestamp" %}</th>
-                                            <th class="text-center">{% translate "Title" %}</th>
-                                            <th class="text-center">{% translate "Action" %}</th>
-                                        </tr>
-                                    </thead>
+            </div>
 
-                                    <tbody>
-                                        {% for notif in read %}
-                                            <tr class="{{ notif.level }}">
-                                                <td class="text-center">{{ notif.timestamp }}</td>
-                                                <td class="text-center">{{ notif.title }}</td>
-                                                <td class="text-center">
-                                                    <a href="{% url 'notifications:view' notif.id %}" class="btn btn-success" title="View">
-                                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                                    </a>
-                                                    <a href="{% url 'notifications:remove' notif.id %}" class="btn btn-danger" title="remove">
-                                                        <span class="glyphicon glyphicon-remove"></span>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            {% else %}
-                                <div class="alert alert-warning text-center">{% translate "No read notifications." %}</div>
-                            {% endif %}
-                        </div>
-                    </div>
+
+            <div class="tab-pane fade" id="read">
+                <div class="table-responsive">
+                    {% if read %}
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">{% translate "Timestamp" %}</th>
+                                    <th class="text-center">{% translate "Title" %}</th>
+                                    <th class="text-center">{% translate "Action" %}</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for notif in read %}
+                                    <tr class="{{ notif.level }}">
+                                        <td class="text-center">{{ notif.timestamp }}</td>
+                                        <td class="text-center">{{ notif.title }}</td>
+                                        <td class="text-center">
+                                            <a href="{% url 'notifications:view' notif.id %}" class="btn btn-success" title="View">
+                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            </a>
+                                            <a href="{% url 'notifications:remove' notif.id %}" class="btn btn-danger" title="remove">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class="alert alert-warning text-center">{% translate "No read notifications." %}</div>
+                    {% endif %}
                 </div>
             </div>
         </div>
