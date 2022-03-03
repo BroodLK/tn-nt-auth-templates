@@ -52,15 +52,15 @@
 
                                     <td class="text-right">
                                         <a href="{% url 'groupmanagement:membership' group.id %}" class="btn btn-primary" title="{% translate "View Members" %}">
-                                            <i class="glyphicon glyphicon-eye-open"></i>
+                                            <i class="fas fa-eye"></i>
                                         </a>
 
                                         <a href="{% url "groupmanagement:audit_log" group.id %}" class="btn btn-info" title="{% translate "Audit Members" %}">
-                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                            <i class="fas fa-list-alt"></i>
                                         </a>
 
                                         <a id="clipboard-copy" data-clipboard-text="{{ request.scheme }}://{{request.get_host}}{% url 'groupmanagement:request_add' group.id %}" class="btn btn-warning" title="{% translate "Copy Direct Join Link" %}">
-                                            <i class="glyphicon glyphicon-copy"></i>
+                                            <i class="fas fa-clipboard"></i>
                                         </a>
                                     </td>
                                 </tr>
