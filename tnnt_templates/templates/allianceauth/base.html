@@ -27,6 +27,8 @@
     <link href="{% static '/color/plugins/jvectormap-next/jquery-jvectormap.css' %}" rel="stylesheet"/>
     <link href="{% static '/color/plugins/nvd3/build/nv.d3.css" rel="stylesheet' %}"/>
     <link href="{% static '/color/plugins/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet"/>
+    {% block extra_css %}
+    {% endblock %}
     <!-- ================== END page-css ================== -->
 </head>
 <body>
@@ -126,7 +128,7 @@
                 </div>
                 <div class="menu-divider m-0"></div>
                 <div class="menu-header">Navigation</div>
-                <ul style="list-style-type:none;">
+                <ul style="list-style-type:none; padding: 0;">
                     <div class="menu-item {% navactive request 'authentication:dashboard' %}">
                         <a href="{% url 'authentication:dashboard' %}" class="menu-link">
                             <div class="menu-icon">
@@ -136,7 +138,7 @@
                         </a>
                     </div>
                     <div class="menu-item {% navactive request 'groupmanagement:groups' %}">
-                        <a href="{% navactive request 'groupmanagement:groups' %}" class="menu-link">
+                        <a href="{% url 'groupmanagement:groups' %}" class="menu-link">
                             <div class="menu-icon">
                                 <i class="fas fa-users fa-fw"></i>
                             </div>
@@ -179,8 +181,11 @@
 <script src="{% static '/color/plugins/apexcharts/dist/apexcharts.min.js' %}"></script>
 <script src="{% static '/color/plugins/moment/min/moment.min.js' %}"></script>
 <script src="{% static '/color/plugins/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
-<script src="{% static '/color/js/demo/dashboard-v3.js' %}"></script>
-
+<script src="{% static '/color/js/demo/dashboard-v3.js' %}">
+{% block extra_javascript %}
+{% endblock %}
+{% block extra_script %}
+{% endblock %}
 <script type="application/javascript">
     let notificationUPdateSettings = {
         notificationsListViewUrl: "{% url 'notifications:list' %}",

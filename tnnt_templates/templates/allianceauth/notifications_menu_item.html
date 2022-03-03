@@ -3,7 +3,7 @@
 
 {% with unread_count=request.user|user_unread_notification_count %}
     {% if unread_count > 0 %}
-        <a href="{% url 'notifications:list' %}" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+        <a href="{% url 'notifications:list' %}" class="navbar-link dropdown-toggle icon">
             <i class="fa fa-bell"></i>
             <span class="badge">{{ unread_count }}</span>
         </a>
