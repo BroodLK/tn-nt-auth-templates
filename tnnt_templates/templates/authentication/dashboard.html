@@ -103,11 +103,22 @@
                     <div class="panel-body text-center">
                         <div style="height: 240px;overflow:-moz-scrollbars-vertical;overflow-y:auto;">
                             <div class="auth-member-groups">
-                                {% for group in groups %}
-                                    <span class="label label-tnnt-default label-dashboard-group-name auth-member-group-item">
-                                        {{ group.name }}
-                                    </span>
-                                {% endfor %}
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for group in groups %}
+										<tr>
+											<td>{{ group.name }}</td>
+										</tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 {% load humanize %}
 
-    <div class="progress-bar progress-striped active bg-{{ level }}" style="width: {% widthratio tasks_count tasks_total 100 %}">
-        {{ tasks_count|intcomma }} {{ label }}
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-{{ level }} fs-12px fw-bold text-black" style="width: {% widthratio tasks_count tasks_total 100 %}%">
+        {% widthratio tasks_count tasks_total 100 %}%
     </div>
