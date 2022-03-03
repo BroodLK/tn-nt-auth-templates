@@ -18,14 +18,14 @@
     <div class="clearfix">
         <div class="row vertical-flexbox-row2">
             <div class="col-sm-6">
-                <div class="panel panel-primary">
+                <div class="panel panel-primary shadow">
                     <div class="panel-heading">
                         <div class="panel-title">
                             {% blocktrans with state=request.user.profile.state %}Main Character (State: {{ state }}){% endblocktrans %}
                         </div>
                     </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body" style="height: 270px;">
                         {% if request.user.profile.main_character %}
                             {% with request.user.profile.main_character as main %}
                                 <div class="row clearfix">
@@ -79,13 +79,13 @@
 
                         <div class="row clearfix">
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary" title="Add Character">
+                                <a href="{% url 'authentication:add_character' %}" class="btn d-block btn-primary" title="Add Character">
                                     {% translate 'Add Character' %}
                                 </a>
                             </div>
 
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-primary" title="Change Main Character">
+                                <a href="{% url 'authentication:change_main_character' %}" class="btn d-block btn-primary" title="Change Main Character">
                                     {% translate "Change Main" %}
                                 </a>
                             </div>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="panel panel-primary">
+                <div class="panel panel-primary shadow">
                     <div class="panel-heading">
                         <div class="panel-title">{% translate "Group Memberships" %}</div>
                     </div>
@@ -117,7 +117,7 @@
 
         <div class="clearfix"></div>
 
-        <div class="panel panel-default">
+        <div class="panel panel-default shadow">
             <div class="panel-heading">
                 <div class="panel-title">
                     {% translate 'Characters' %}
@@ -150,24 +150,6 @@
                                     <img src="{{ char.alliance_id|alliance_logo_url:32 }}" alt=" {{ char.alliance_name }}" style="margin-right: 0.25rem;">
                                     {{ char.alliance_name }}
                                 {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-
-                <table class="table visible-xs-block" style="width: 100%;">
-                    <tbody>
-                    {% for char in characters %}
-                        <tr>
-                            <td class="text-center valign-middle">
-                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
-                            </td>
-
-                            <td class="text-center" style="vertical-align: middle; width: 100%;">
-                                <strong>{{ char.character_name }}</strong><br>
-                                {{ char.corporation_name }}<br>
-                                {{ char.alliance_name|default:"" }}
                             </td>
                         </tr>
                     {% endfor %}
