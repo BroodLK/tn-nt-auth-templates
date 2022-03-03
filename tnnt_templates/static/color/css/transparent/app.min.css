@@ -17955,7 +17955,7 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     position: relative
 }
 
-.app-sidebar .menu .menu-item .menu-link {
+.app-sidebar .menu .menu-item .menu-link, li a {
     padding: 7px 15px;
     line-height: 20px;
     color: rgba(255, 255, 255, .6);

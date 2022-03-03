@@ -126,15 +126,16 @@
                 </div>
                 <div class="menu-divider m-0"></div>
                 <div class="menu-header">Navigation</div>
-                <div class="menu-item {% navactive request 'authentication:dashboard' %}">
-                    <a href="{% url 'authentication:dashboard' %}" class="menu-link">
-                        <div class="menu-icon">
-                            <i class="fa fa-sitemap"></i>
-                        </div>
-                        <div class="menu-text">{% translate "Dashboard" %}</div>
-                    </a>
-                </div>
-                <div class="menu-item {% navactive request 'groupmanagement:groups' %}">
+                <ul style="list-style-type:none;">
+                    <div class="menu-item {% navactive request 'authentication:dashboard' %}">
+                        <a href="{% url 'authentication:dashboard' %}" class="menu-link">
+                            <div class="menu-icon">
+                                <i class="fa fa-sitemap"></i>
+                            </div>
+                            <div class="menu-text">{% translate "Dashboard" %}</div>
+                        </a>
+                    </div>
+                    <div class="menu-item {% navactive request 'groupmanagement:groups' %}">
                         <a href="{% navactive request 'groupmanagement:groups' %}" class="menu-link">
                             <div class="menu-icon">
                                 <i class="fas fa-users fa-fw"></i>
@@ -143,23 +144,20 @@
                         </a>
                     </div>
                     {% include 'allianceauth/side-menu.html' %}
-                </div>
-            <!-- END menu -->
+                </ul>
+            </div>
         </div>
-        <!-- END scrollbar -->
     </div>
 <div class="app-sidebar-bg"></div>
 <div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
 <!-- END #sidebar -->
 
 <!-- BEGIN #content -->
-
 <div id="content" class="app-content">
     {% include 'allianceauth/messages.html' %}
     {% block content %}
     {% endblock content %}
 </div>
-
 <!-- END #content -->
 
 <!-- BEGIN scroll-top-btn -->
@@ -167,7 +165,6 @@
     class="fa fa-angle-up"></i></a>
 <!-- END scroll-top-btn -->
 </div>
-<!-- END #app -->
 
 <!-- ================== BEGIN core-js ================== -->
 <script src="{% static '/color/js/vendor.min.js' %}"></script>

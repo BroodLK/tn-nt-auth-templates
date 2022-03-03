@@ -18,19 +18,29 @@
                                 <b>Alliance Auth Notifications</b>
                             </div>
                             <div class="row text-truncate">
-                                <ul class="list-group">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Title</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
                                     {% for notif in notifications %}
-                                        <li class="list-group-item">
+                                        <tr><td>
                                             {% if notif.state == 'opened' %}
                                                 <span class="badge bg-success">{% translate "Open" %}</span>
                                             {% else %}
                                                 <span class="badge bg-danger">{% translate "Closed" %}</span>
-                                            {% endif %}
+                                            {% endif %}</td><td>
                                             <a href="{{ notif.web_url }}"
-                                               target="_blank">#{{ notif.iid }} {{ notif.title }}</a>
-                                        </li>
+                                               target="_blank">#{{ notif.iid }} {{ notif.title }}</a></td>
+                                        </tr>
                                     {% endfor %}
-                                </ul>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

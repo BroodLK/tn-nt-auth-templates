@@ -2,9 +2,5 @@
 {% load navactive %}
 {% load menu_items %}
 
+
 {% menu_items %}
-{% for items in menu_items %}
-    <div class="menu-item {% navactive request 'authentication:dashboard' %}">
-        <div class="menu-text">{{ items }}</div>
-    </div>
-{% endfor %}
