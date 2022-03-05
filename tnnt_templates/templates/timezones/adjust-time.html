@@ -221,21 +221,20 @@
                             <option>58</option>
                             <option>59</option>
                         </select>
-                    </div>
 
-                    <select class="form-select" id="tatzone">
-                        <option value="">{% translate "Local Time" %}</option>
-                        <option value="ETC/UTC" selected>{% translate "EVE Time" %}</option>
-                        {% for timezone in timezones %}
-                            <option value="{{ timezone.timezone.timezone_name }}">{{ timezone.panel_name }}</option>
-                        {% endfor %}
-                    </select>
+                        <select class="form-select" id="tatzone">
+                            <option value="">{% translate "Local Time" %}</option>
+                            <option value="ETC/UTC" selected>{% translate "EVE Time" %}</option>
+                            {% for timezone in timezones %}
+                                <option value="{{ timezone.timezone.timezone_name }}">{{ timezone.panel_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
 
                 <div class="row mb-10px">
                     <div class="input-group">
                         <div class="input-group-text">{% translate "on" %}</div>
-                        >
                         <select class="form-select" id="tatyear"></select>
                         <div class="input-group-text">-</div>
                         <select class="form-select" id="tatmonth">
@@ -252,6 +251,7 @@
                             <option value="11">{% translate "November" %}</option>
                             <option value="12">{% translate "December" %}</option>
                         </select>
+                        <div class="input-group-text">-</div>
                         <select class="form-select" id="tatday">
                             <option>01</option>
                             <option>02</option>
