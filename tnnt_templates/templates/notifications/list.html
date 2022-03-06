@@ -16,13 +16,13 @@
             <li class="nav-item">
                 <a href="#unread" data-bs-toggle="tab" class="nav-link active">
                     <span class="d-sm-none">Tab 1</span>
-                    <span class="d-sm-block d-none">{% translate "Unread" %}<b>({{ unread|length }})</b></span>
+                    <span class="d-sm-block d-none">{% translate "Unread" %} <span class="badge ms-1">({{ unread|length }})</span></span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="#read" data-bs-toggle="tab" class="nav-link">
                     <span class="d-sm-none">Tab 2</span>
-                    <span class="d-sm-block d-none">{% translate "Read" %} <b>({{ read|length }})</b></span>
+                    <span class="d-sm-block d-none">{% translate "Read" %} <span class="badge ms-1">({{ read|length }})</span></span>
                 </a>
             </li>
             <li class="nav-item">

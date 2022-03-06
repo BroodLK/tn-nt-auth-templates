@@ -1,0 +1,15 @@
+{% load static %}
+{% load i18n %}
+{% load navactive %}
+
+<div class="col-xl-12 ui-sortable">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="{% url 'groupmanagement:management' %}" class="nav-link {% navactive request 'groupmanagement:management' %}">{% translate "Group Requests" %}</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'groupmanagement:membership' %}" class="nav-link {% navactive request 'groupmanagement:membership' %}">{% translate "Group Membership" %}</a>
+            </a>
+        </li>
+    </ul>
+</div>
