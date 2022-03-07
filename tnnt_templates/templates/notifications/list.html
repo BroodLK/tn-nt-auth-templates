@@ -18,13 +18,11 @@
             <li class="nav-item">
                 <a href="#read" data-bs-toggle="tab" class="nav-link">
                     <span class="d-sm-none">Tab 2</span>
-                    <span class="d-sm-block d-none">{% translate "Read" %}{% if unread|length > 0 %}<span class="badge">{{ read|length }}</span>{% endif %}</span>
+                    <span class="d-sm-block d-none">{% translate "Read" %}{% if read|length > 0 %}<span class="badge">{{ read|length }}</span>{% endif %}</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'notifications:mark_all_read' %}" class="btn btn-primary">{% translate "Mark All Read" %}</a>
-            </li>
-            <li class="nav-item">
                 <a href="{% url 'notifications:delete_all_read' %}" class="btn btn-danger">{% translate "Delete All Read" %}</a>
             </li>
         </ul>
