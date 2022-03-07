@@ -3,11 +3,7 @@
 {% load i18n %}
 
 {% block page_title %}{% translate "Available Groups" %}{% endblock page_title %}
-
 {% block content %}
-    <div class="clearfix">
-        <h1 class="page-header text-center">{% translate "Available Groups" %}</h1>
-
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title">{% translate "Groups" %}</div>
@@ -66,7 +62,7 @@
                 {% endif %}
             </div>
         </div>
-    </div>
+
 {% endblock content %}
 
 {% block extra_css %}

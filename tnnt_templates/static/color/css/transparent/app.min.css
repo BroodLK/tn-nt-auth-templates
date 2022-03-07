@@ -18352,6 +18352,20 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
     right: 5px
 }
 
+li .badge {
+    position: absolute;
+    top: 8px;
+    display: block;
+    background: var(--app-theme);
+    color: var(--app-theme-color);
+    line-height: 12px;
+    font-weight: 500;
+    padding: 3px 6px;
+    font-size: 0.75em;
+    border-radius: 20px;
+    right: 5px
+}
+
 .app-header .navbar-nav .navbar-item .navbar-link i {
     position: relative;
     font-size: 16px
