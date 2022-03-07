@@ -5,18 +5,20 @@
 {% block page_title %}{% translate "Notifications" %}{% endblock %}
 
 {% block content %}
+
+    <h1 class="row page-header text-center">{% translate "Notifications" %}</h1>
     <div class="col-xl-12 ui-sortable">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a href="#unread" data-bs-toggle="tab" class="nav-link active">
                     <span class="d-sm-none">Tab 1</span>
-                    <span class="d-sm-block d-none">{% translate "Unread" %} <span class="badge ms-1">({{ unread|length }})</span></span>
+                    <span class="d-sm-block d-none">{% translate "Unread" %}{% if unread|length > 0 %}<span class="badge">{{ unread|length }}</span>{% endif %}</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="#read" data-bs-toggle="tab" class="nav-link">
                     <span class="d-sm-none">Tab 2</span>
-                    <span class="d-sm-block d-none">{% translate "Read" %} <span class="badge ms-1">({{ read|length }})</span></span>
+                    <span class="d-sm-block d-none">{% translate "Read" %}{% if unread|length > 0 %}<span class="badge">{{ read|length }}</span>{% endif %}</span>
                 </a>
             </li>
             <li class="nav-item">
