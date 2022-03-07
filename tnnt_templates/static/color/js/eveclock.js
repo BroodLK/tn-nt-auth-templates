@@ -37,13 +37,6 @@ $(document).ready(function () {
     };
 
     /**
-     * Functions that need to be executed on successful ajax events
-     */
-    $(document).ajaxSuccess(function () {
-        externalLinks();
-    });
-
-    /**
      * Functions that need to be executed on load
      */
     const init = function () {
