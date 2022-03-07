@@ -18362,6 +18362,11 @@ a .badge {
     margin-left: .234375rem !important;
 }
 
+a .active {
+    color: var(--app-component-color);
+    background: rgba(255, 255, 255, .25);
+}
+
 .app-header .navbar-nav .navbar-item .navbar-link i {
     position: relative;
     font-size: 16px
