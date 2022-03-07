@@ -18362,12 +18362,16 @@ a .badge {
     margin-left: .234375rem !important;
 }
 
-a .active {
+li .active {
     color: var(--app-component-color);
     background: rgba(255, 255, 255, .25);
 }
 
 a .fas {
+    margin-right: .234375rem !important;
+}
+
+a .far {
     margin-right: .234375rem !important;
 }
 
