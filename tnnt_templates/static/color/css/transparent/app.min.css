@@ -8254,9 +8254,13 @@ textarea.form-control-lg {
     font-weight: 500;
     line-height: 1;
     color: #fff;
+    display: block;
+    background: var(--app-theme);
+    color: var(--app-theme-color);
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
+    padding: 3px 6px;
     border-radius: 4px
 }
 
