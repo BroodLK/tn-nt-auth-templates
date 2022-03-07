@@ -18357,17 +18357,9 @@ body:not([class*=theme-]) .app-header .navbar-brand .navbar-logo {
 }
 
 a .badge {
-    position: absolute;
-    top: 8px;
-    display: block;
-    background: var(--app-theme);
-    color: var(--app-theme-color);
-    line-height: 12px;
-    font-weight: 500;
     padding: 3px 6px;
-    font-size: 0.75em;
     border-radius: 20px;
-    right: 5px
+    margin-left: .234375rem !important;
 }
 
 .app-header .navbar-nav .navbar-item .navbar-link i {
