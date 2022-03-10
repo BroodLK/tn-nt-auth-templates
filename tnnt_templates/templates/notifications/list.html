@@ -44,7 +44,7 @@
 
                             <tbody>
                                 {% for notif in unread %}
-                                    <tr class="{{ notif.level }}">
+                                    <tr class="table-{{ notif.level }}">
                                         <td class="text-center">{{ notif.timestamp }}</td>
                                         <td class="text-center">{{ notif.title }}</td>
                                         <td class="text-center">
@@ -80,7 +80,7 @@
 
                             <tbody>
                                 {% for notif in read %}
-                                    <tr class="{{ notif.level }}">
+                                    <tr class="table-{{ notif.level }}">
                                         <td class="text-center">{{ notif.timestamp }}</td>
                                         <td class="text-center">{{ notif.title }}</td>
                                         <td class="text-center">
