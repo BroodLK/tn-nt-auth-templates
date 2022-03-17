@@ -459,9 +459,24 @@
     }
 }
 
+.panel-heading > .dropdown .dropdown-toggle, .panel-title, .panel-title > .small, .panel-title > .small > a, .panel-title > a, .panel-title > small, .panel-title > small > a {
+    color: inherit
+}
+
+.panel-title, .panel > .list-group, .panel > .panel-collapse > .list-group, .panel > .panel-collapse > .table, .panel > .table, .panel > .table-responsive > .table {
+    margin-bottom: 0
+}
+
+.panel-title {
+    margin-top: 0;
+    font-size: 17px
+}
+
 .navbar-default {
-    background-color: #375a7f;
-    border-color: transparent
+    background-color: #656a74;
+    border-color: transparent;
+    line-height: 1;
+    font-weight: 700;
 }
 
 .navbar-default .navbar-brand {
